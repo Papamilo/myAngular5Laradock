@@ -2,7 +2,7 @@
 <ul class="teams">
   <li *ngFor="let nba of nbae"
     [class.selected]="nba === selectedTeam"
-    (click)="onSelect(nbae)">
+    (click)="onSelect(nba)">
     <span class="badge">{{nba.id}}</span> {{nba.name}}
   </li>
 </ul>
