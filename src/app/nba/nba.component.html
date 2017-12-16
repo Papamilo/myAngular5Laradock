@@ -1,3 +1,20 @@
-<p>
-  nba works!
-</p>
+<h2>The NBA Teams</h2>
+<ul class="teams">
+  <li *ngFor="let nba of nbae"
+    [class.selected]="nba === selectedTeam"
+    (click)="onSelect(nbae)">
+    <span class="badge">{{nba.id}}</span> {{nba.name}}
+  </li>
+</ul>
+
+<div *ngIf="selectedTeam">
+
+  <h2>{{ selectedTeam.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{selectedTeam.id}}</div>
+  <div>
+    <label>name:
+      <input [(ngModel)]="selectedTeam.name" placeholder="name">
+    </label>
+  </div>
+
+</div>

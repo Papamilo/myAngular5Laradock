@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Nba } from '../nba';
+import { NBAE } from '../mock-nba-est';
+import { NBAW } from '../mock-nba-west';
 
 @Component({
   selector: 'app-nba',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NbaComponent implements OnInit {
 
+  nbae = NBAE;
+  nbaw = NBAW;
+
+  selectedTeam: Nba;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  onSelect(nba: Nba): void {
+    this.selectedTeam = nba;
+    // this.selectedTeam = nbaw;
   }
 
 }

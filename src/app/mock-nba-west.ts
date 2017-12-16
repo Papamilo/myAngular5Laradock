@@ -1,19 +1,19 @@
 import { Nba } from './nba';
 
 export const NBAW: Nba[] = [
-  { id: 1, name: 'Boston Celtics' },
-  { id: 2, name: 'Cleveland Cavaliers' },
-  { id: 3, name: 'Toronto Raptors' },
-  { id: 4, name: 'Milwaukee Bucks' },
-  { id: 5, name: 'Indiana Pacers' },
-  { id: 6, name: 'Washington Wizards' },
-  { id: 7, name: 'Philadelphia 76ers' },
-  { id: 8, name: 'Detroit Pistons' },
-  { id: 9, name: 'New York Knicks' },
-  { id: 10, name: 'Miami Heat' },
-  { id: 11, name: 'Brooklin Nets' },
-  { id: 12, name: 'Orlando Magic' },
-  { id: 13, name: 'Charlotte Hornets' },
-  { id: 14, name: 'Chicago Bulls' },
-  { id: 15, name: 'Atlanta Hawks' }
+  { id: 16, name: 'Houston Rockets' },
+  { id: 17, name: 'Golden State Warriors' },
+  { id: 18, name: 'San Antonio Spurs' },
+  { id: 19, name: 'Minesota Timberwolves' },
+  { id: 20, name: 'Denver Nuggets' },
+  { id: 21, name: 'Portland Trail Blazers' },
+  { id: 22, name: 'New Orleans Pélicans' },
+  { id: 23, name: 'Oklahoma City Thunder' },
+  { id: 24, name: 'Utah Jazz' },
+  { id: 25, name: 'Los Angeles Clippers' },
+  { id: 26, name: 'Los Angeles Lakers' },
+  { id: 27, name: 'Sacramento Kings' },
+  { id: 28, name: 'Memphis Greezlies' },
+  { id: 29, name: 'Phoenix Suns' },
+  { id: 30, name: 'Dallas Mavericks' }
   ];
