@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { NbaComponent } from './nba/nba.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
+import { NbaDetailComponent } from './nba-detail/nba-detail.component';
+import { MessagesComponent } from './messages/messages.component';
+import { HeroService } from './hero.service';
+import { MessageService } from './message.service';
 
 
 @NgModule({
@@ -13,13 +17,15 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
     AppComponent,
     HeroesComponent,
     NbaComponent,
-    HeroDetailComponent
+    HeroDetailComponent,
+    NbaDetailComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [HeroService, MessageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

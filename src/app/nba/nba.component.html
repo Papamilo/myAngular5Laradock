@@ -16,14 +16,6 @@
   </li>
 </ul>
 
-<div *ngIf="selectedTeam">
 
-  <h2>{{ selectedTeam.name | uppercase }} Details</h2>
-  <div><span>id: </span>{{selectedTeam.id}}</div>
-  <div>
-    <label>name:
-      <input [(ngModel)]="selectedTeam.name" placeholder="name">
-    </label>
-  </div>
+<app-nba-detail [nba]="selectedTeam"></app-nba-detail>
 
-</div>
