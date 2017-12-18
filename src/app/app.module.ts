@@ -10,6 +10,7 @@ import { NbaDetailComponent } from './nba-detail/nba-detail.component';
 import { MessagesComponent } from './messages/messages.component';
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
+import { NbaService } from './nba.service';
 
 
 @NgModule({
@@ -25,7 +26,7 @@ import { MessageService } from './message.service';
     BrowserModule,
     FormsModule
   ],
-  providers: [HeroService, MessageService],
+  providers: [HeroService, MessageService, NbaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
