@@ -1,3 +1,4 @@
+import { NbaMessageService } from './../nba-message.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NbaMessagesComponent implements OnInit {
 
-  constructor() { }
+  constructor(public nbaMessageService: NbaMessageService) { }
 
   ngOnInit() {
   }
