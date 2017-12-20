@@ -3,10 +3,10 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class NbaMessageService {
 
-  nbaMessages: any[] = [];
-  // To be modify with the write type under and bellow too
+  nbaMessages: string[] = [];
+  // To be modify with the right type under and bellow too
 
-  add(nbaMessage: any[]) {
+  add(nbaMessage: String[]) {
     this.nbaMessages.push(nbaMessage);
   }
 
