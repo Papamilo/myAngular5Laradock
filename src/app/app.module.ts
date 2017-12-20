@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router'; // <-- RouterModule lives here
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms'; // <-- NgModel lives here
@@ -13,6 +14,8 @@ import { MessageService } from './message.service';
 import { NbaService } from './nba.service';
 import { NbaMessagesComponent } from './nba-messages/nba-messages.component';
 import { NbaMessageService } from './nba-message.service';
+import { AppRoutingModule } from './/app-routing.module';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 
 @NgModule({
@@ -23,11 +26,14 @@ import { NbaMessageService } from './nba-message.service';
     HeroDetailComponent,
     NbaDetailComponent,
     MessagesComponent,
-    NbaMessagesComponent
+    NbaMessagesComponent,
+    DashboardComponent
   ],
   imports: [
+    RouterModule.forRoot(routes),
     BrowserModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
   ],
   providers: [HeroService, MessageService, NbaService, NbaMessageService],
   bootstrap: [AppComponent]

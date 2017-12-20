@@ -15,6 +15,6 @@ export class NbaService {
   getNba(): Observable<{nbae: Nba[], nbaw: Nba[]}> {
     // Todo: sent the message _after_fetching the heroes
     this.nbaMessageService.add('NbaMessageService: fetched nbae and nbaw !');
-    return of({nbae: NBAE, nbaw: NBAW});
+    return of({ nbae: NBAE, nbaw: NBAW });
   }
 }

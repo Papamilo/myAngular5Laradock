@@ -4,9 +4,8 @@ import { Injectable } from '@angular/core';
 export class NbaMessageService {
 
   nbaMessages: string[] = [];
-  // To be modify with the right type under and bellow too
 
-  add(nbaMessage: String[]) {
+  add(nbaMessage: string) {
     this.nbaMessages.push(nbaMessage);
   }
 
