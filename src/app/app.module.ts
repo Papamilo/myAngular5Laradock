@@ -14,7 +14,9 @@ import { MessageService } from './message.service';
 import { NbaService } from './nba.service';
 import { NbaMessagesComponent } from './nba-messages/nba-messages.component';
 import { NbaMessageService } from './nba-message.service';
+
 import { AppRoutingModule } from './/app-routing.module';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 
 
@@ -30,7 +32,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     DashboardComponent
   ],
   imports: [
-    RouterModule.forRoot(routes),
     BrowserModule,
     FormsModule,
     AppRoutingModule
