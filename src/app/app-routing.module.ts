@@ -5,14 +5,15 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HeroesComponent } from './heroes/heroes.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NbaComponent } from './nba/nba.component';
-import { Nba } from './nba';
+import { NbaDetailComponent } from './nba-detail/nba-detail.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: DashboardComponent },
   { path: 'detail/:id', component: HeroDetailComponent },
   { path: 'heroes', component: HeroesComponent },
-  { path: '/nba', component: NbaComponent}
+  { path: 'nba', component: NbaComponent },
+  { path: 'detail/:id', component: NbaDetailComponent }
 ];
 
 @NgModule({
