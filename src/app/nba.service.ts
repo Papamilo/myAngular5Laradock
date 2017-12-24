@@ -17,4 +17,10 @@ export class NbaService {
     this.nbaMessageService.add('NbaMessageService: fetched nbae and nbaw !');
     return of({ nbae: NBAE, nbaw: NBAW });
   }
+
+  getNbaes(id: number): Observable<Nba> {
+    // Todo: send the message_afer_fetching the hero
+    this.nbaMessageService.add(`NbaService: fetched nba id=${id}`);
+    return of(NBAE.find(nba => nba.id === id));
+  }
 }

@@ -1,6 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Nba } from '../nba';
 
+import { ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+import { NbaService } from '../nba.service';
+
 @Component({
   selector: 'app-nba-detail',
   templateUrl: './nba-detail.component.html',
@@ -8,11 +12,22 @@ import { Nba } from '../nba';
 })
 export class NbaDetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private route: ActivatedRoute,
+    private nbaService: NbaService,
+    private location: Location
+  ) { }
 
   @Input() nba: Nba;
 
   ngOnInit() {
+    this.getNbaes();
+  }
+
+  getNbaes(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.nbaService.getNbaes(id)
+      .subscribe(nba => this.nba = nba);
   }
 
 }

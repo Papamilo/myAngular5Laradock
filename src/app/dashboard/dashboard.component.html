@@ -9,4 +9,23 @@
 </div>
 
 
-<h3></h3>
+<h3>Qualified Eastern Teams</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let nba of nbae" class="col-1-4"
+      routerLink="/detail/{{nba.id}}">
+    <div class="module hero">
+      <h4>{{nba.name}}</h4>
+    </div>
+  </a>
+</div>
+
+
+<h3>Qualified Western Teams</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let nba of nbae" class="col-1-4"
+      routerLink="/detail/{{nba.id}}">
+      <div class="module hero">
+        <h4>{{nba.name}}</h4>
+      </div>
+  </a>
+</div>

@@ -23,12 +23,6 @@ export class NbaComponent implements OnInit {
     this.getNba();
   }
 
-
-  onSelect(nbae: Nba, nbaw: Nba): void {
-    this.selectedTeam = nbaw;
-    this.selectedTeam = nbae;
-  }
-
   getNba(): void {
     this.nbaService.getNba()
       .subscribe(nba => {

@@ -1,18 +1,18 @@
 <h2>The Eastern conference</h2>
 <ul class="teams">
-  <li *ngFor="let nba of nbae"
-    [class.selected]="nba === selectedTeam"
-    (click)="onSelect(nba)">
-    <span class="badge">{{nba.id}}</span> {{nba.name}}
+  <li *ngFor="let nba of nbae">
+   <a routerLink="/detail/{{nba.id}}">
+      <span class="badge">{{nba.id}}</span> {{nba.name}}
+   </a>
   </li>
 </ul>
 
 <h2>The Western conference</h2>
 <ul class="teams">
-  <li *ngFor="let nba of nbaw"
-    [class.selected]="nba === selectedTeam"
-    (click)="onSelect(nba)">
-    <span class="badge">{{nba.id}}</span> {{nba.name}}
+  <li *ngFor="let nba of nbaw">
+    <a routerLink="/detail/{{nba.id}}">
+      <span class="badge">{{nba.id}}</span> {{nba.name}}
+    </a>
   </li>
 </ul>
 
