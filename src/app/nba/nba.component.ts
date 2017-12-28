@@ -11,10 +11,8 @@ import { NBAW } from '../mock-nba-west';
 })
 export class NbaComponent implements OnInit {
 
-  nbae = NBAE;
-  nbaw = NBAW;
-
-  selectedTeam: Nba;
+  nbae: Nba[] = NBAE;
+  nbaw: Nba[] = NBAW;
 
   constructor(private nbaService: NbaService) { }
 

@@ -18,16 +18,31 @@ export class NbaDetailComponent implements OnInit {
     private location: Location
   ) { }
 
-  @Input() nba: Nba;
+  @Input() nba: Nba[];
 
   ngOnInit() {
     this.getNbaes();
+    console.log(this.nba);
   }
 
   getNbaes(): void {
     const id = +this.route.snapshot.paramMap.get('id');
     this.nbaService.getNbaes(id)
-      .subscribe(nba => this.nba = nba);
+      .subscribe(nba =>  {
+        this.nba = nba.nbae;
+        this.nba = nba.nbaw;
+      });
+  }
+/*
+  getHero(): void {
+    const id = +this.route.snapshot.paramMap.get('id');
+    this.heroService.getHero(id)
+      .subscribe(hero => this.hero = hero);
+  }
+  */
+
+  goBack(): void {
+    this.location.back();
   }
 
 }

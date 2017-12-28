@@ -1,6 +1,5 @@
 
 <div *ngIf="nba">
-
   <h2>{{ nba.name | uppercase }} Details</h2>
   <div><span>id: </span>{{nba.id}}</div>
   <div>
@@ -8,5 +7,5 @@
       <input [(ngModel)]="nba.name" placeholder="name">
     </label>
   </div>
-
+<button (click)="goBack()">go back</button>
 </div>

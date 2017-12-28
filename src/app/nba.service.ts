@@ -12,15 +12,21 @@ export class NbaService {
 
   constructor(private nbaMessageService: NbaMessageService) { }
 
+  nbae = NBAE;
+  nbaw = NBAW;
+
   getNba(): Observable<{nbae: Nba[], nbaw: Nba[]}> {
     // Todo: sent the message _after_fetching the heroes
-    this.nbaMessageService.add('NbaMessageService: fetched nbae and nbaw !');
+    this.nbaMessageService.add('NbaService: fetched nbae and nbaw !');
     return of({ nbae: NBAE, nbaw: NBAW });
   }
 
-  getNbaes(id: number): Observable<Nba> {
+  getNbaes(id: number): Observable<{nbae: Nba[], nbaw: Nba[]}> {
     // Todo: send the message_afer_fetching the hero
     this.nbaMessageService.add(`NbaService: fetched nba id=${id}`);
-    return of(NBAE.find(nba => nba.id === id));
+      this.nbae.find(nba => nba.id === id);
+      this.nbaw.find(nba => nba.id === id);
+    return of({ nbae: NBAE, nbaw: NBAW });
+
   }
 }
