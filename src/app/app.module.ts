@@ -10,9 +10,12 @@ import { NbaComponent } from './nba/nba.component';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { NbaDetailComponent } from './nba-detail/nba-detail.component';
 import { MessagesComponent } from './messages/messages.component';
+
 import { HeroService } from './hero.service';
 import { MessageService } from './message.service';
 import { NbaService } from './nba.service';
+import { NbaTeamService } from './nba-team.service';
+
 import { NbaMessagesComponent } from './nba-messages/nba-messages.component';
 import { NbaMessageService } from './nba-message.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -46,7 +49,7 @@ HttpClientInMemoryWebApiModule.forRoot(
   InMemoryDataService, { dataEncapsulation: false }
 )
   ],
-  providers: [HeroService, MessageService, NbaService, NbaMessageService],
+  providers: [HeroService, MessageService, NbaService, NbaMessageService, NbaTeamService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
